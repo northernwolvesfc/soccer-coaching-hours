@@ -30,7 +30,7 @@ export default function Home() {
   }
 
   return <main>
-    <header className="site-header"><a className="brand" href="#top"><span className="ball">⚽</span><span>Northern Wolves Coaching Hours</span></a><span className="secure-note">Quick · Private · Mobile-friendly</span></header>
+    <header className="site-header"><a className="brand" href="#top"><img   className="brand-logo"   src="/northern-wolves-logo.png"   alt="Northern Wolves logo" /><span>Northern Wolves Coaching Hours</span></a><span className="secure-note">Quick · Private · Mobile-friendly</span></header>
     <section className="hero" id="top">
       <div className="intro"><p className="eyebrow">Northern Wolves coaching hours tracker</p><h1>Log your time.<br/>Keep the game moving.</h1><p className="lede">Record each soccer coaching session in under a minute. Your hours are added directly to the team spreadsheet.</p><div className="steps"><div><b>1</b><span>Enter session details</span></div><div><b>2</b><span>Submit your hours</span></div><div><b>3</b><span>Totals update automatically</span></div></div></div>
       <div className="form-card">{status === "success" ? <div className="success-panel" role="status"><div className="check">✓</div><p className="eyebrow">Submission received</p><h2>Thank you for coaching.</h2><p>Your session has been sent to the coaching-hours spreadsheet.</p><p className="receipt">Confirmation: <strong>{receipt}</strong></p><button className="primary" onClick={()=>setStatus("idle")}>Log another session</button></div> :
