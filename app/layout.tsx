@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Soccer Coaching Hours Tracker",
-  description: "Submit and track volunteer soccer coaching hours.",
+  title: "Northern Wolves Coaching Hours Tracker",
+  description: "Submit and track Northern Wolves coaching hours.",
   other: {
     "codex-preview": "development",
   },
