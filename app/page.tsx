@@ -2,7 +2,7 @@
 import { FormEvent, useMemo, useState } from "react";
 
 const SCRIPT_URL = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL ?? "";
-const LOCATIONS = ["BMO Soccer Centre", "Dartmouth Sportsplex", "Harbour East All-Weather Field", "Other"];
+const LOCATIONS = ["BMO Soccer Centre", "Lunenburg ", "Other"];
 type Status = "idle" | "submitting" | "success" | "error";
 
 export default function Home() {
@@ -30,9 +30,9 @@ export default function Home() {
   }
 
   return <main>
-    <header className="site-header"><a className="brand" href="#top"><span className="ball">⚽</span><span>Coaching Hours</span></a><span className="secure-note">Quick · Private · Mobile-friendly</span></header>
+    <header className="site-header"><a className="brand" href="#top"><span className="ball">⚽</span><span>Northern Wolves Coaching Hours</span></a><span className="secure-note">Quick · Private · Mobile-friendly</span></header>
     <section className="hero" id="top">
-      <div className="intro"><p className="eyebrow">Volunteer coaching tracker</p><h1>Log your time.<br/>Keep the game moving.</h1><p className="lede">Record each soccer coaching session in under a minute. Your hours are added directly to the team spreadsheet.</p><div className="steps"><div><b>1</b><span>Enter session details</span></div><div><b>2</b><span>Submit your hours</span></div><div><b>3</b><span>Totals update automatically</span></div></div></div>
+      <div className="intro"><p className="eyebrow">Northern Wolves coaching hours tracker</p><h1>Log your time.<br/>Keep the game moving.</h1><p className="lede">Record each soccer coaching session in under a minute. Your hours are added directly to the team spreadsheet.</p><div className="steps"><div><b>1</b><span>Enter session details</span></div><div><b>2</b><span>Submit your hours</span></div><div><b>3</b><span>Totals update automatically</span></div></div></div>
       <div className="form-card">{status === "success" ? <div className="success-panel" role="status"><div className="check">✓</div><p className="eyebrow">Submission received</p><h2>Thank you for coaching.</h2><p>Your session has been sent to the coaching-hours spreadsheet.</p><p className="receipt">Confirmation: <strong>{receipt}</strong></p><button className="primary" onClick={()=>setStatus("idle")}>Log another session</button></div> :
       <form onSubmit={submitHours}><div className="form-heading"><div><p className="eyebrow">New entry</p><h2>Coaching session</h2></div><span>All fields marked * are required</span></div>
         <label>Coach name *<input name="name" type="text" autoComplete="name" maxLength={80} required placeholder="Full name"/></label>
